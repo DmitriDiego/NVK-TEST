@@ -1,1 +1,30 @@
 {% extends 'main/base.html'%}
+
+{% block table %}
+<div class="w-75 h-100 bd-highlight">
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th>Название</th>
+            <th>ТЕХ ID</th>
+            <th>ИНВ</th>
+            <th>Кабинет</th>
+            <th>Отдел</th>
+            <th>Описание</th>
+            <th>Комментанрий</th>
+        </tr>
+        </thead>
+        {% for el in inv %}
+        <tr >
+                <td>{{el.name}}</td>
+                <td>{{el.tech_id}}</td>
+                <td>{{el.invent_id}}</td>
+                <td>{{el.room}}</td>
+                <td>{{el.department}}</td>
+                <td>{{el.description}}</td>
+                <td>{{el.comment}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

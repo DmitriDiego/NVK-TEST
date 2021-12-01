@@ -4,12 +4,13 @@ from .models import *
 
 
 def index(request):
-    inv = TEST_1.objects.all()
+    inv = Inv.objects.all()
     return render(request, 'main/index.html', {'inv': inv})
 
 
 def repair(request):
-    return render(request, 'main/repair.html')
+    rep = Rep.objects.all()
+    return render(request, 'main/repair.html', {'Rep': rep})
 
 
 def journal(request):
