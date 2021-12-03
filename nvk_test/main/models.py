@@ -15,7 +15,7 @@ class Inv(models.Model):
     time_create = models.DateTimeField(auto_now_add=True, verbose_name="Время создания")
     time_update = models.DateTimeField(auto_now=True, verbose_name="Время последнего изменения")
 
-    # username = models.ForeignKey(on_delete=models.PROTECT, verbose_name='Создавший пользователь')
+    #username = models.ForeignKey('auth_user', on_delete=models.PROTECT, verbose_name='Создавший пользователь')
 
     class Meta:
         verbose_name = 'Оборудование'
